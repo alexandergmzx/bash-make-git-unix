@@ -11,10 +11,10 @@
 all: README.md
 
 README.md: guessinggame.sh
-	echo "Project: The file number guessing game" > $@
-	echo "DATE:" >> $@
+	echo "# Project: The file number guessing game\n" > $@
+	echo "**DATE:**" >> $@
 	date >> $@
-	echo "NUMBER OF LINES:" >> $@
+	echo " \n**NUMBER OF LINES:**" >> $@
 	wc -l $< | egrep -o "[0-9]+" >> $@
 
 .PHONY: clean
